@@ -1,0 +1,19 @@
+// Global test setup
+process.env.OPENAI_API_KEY = "test-key";
+process.env.SUPABASE_URL = "https://test.supabase.co";
+process.env.SUPABASE_SERVICE_KEY = "test-service-key";
+process.env.REDIS_URL = "redis://localhost:6379";
+process.env.TELEGRAM_BOT_TOKEN = "123:test";
+process.env.TELEGRAM_CHAT_ID = "999";
+process.env.NEWSAPI_KEY = "test";
+process.env.GNEWS_API_KEY = "test";
+process.env.PRODUCTHUNT_TOKEN = "test";
+process.env.REPLICATE_API_TOKEN = "test";
+process.env.LINKEDIN_ACCESS_TOKEN = "test";
+process.env.LINKEDIN_PERSON_ID = "test";
+process.env.TWITTER_API_KEY = "test";
+process.env.TWITTER_API_SECRET = "test";
+process.env.TWITTER_ACCESS_TOKEN = "test";
+process.env.TWITTER_ACCESS_SECRET = "test";
+process.env.INSTAGRAM_USER_ID = "test";
+process.env.INSTAGRAM_ACCESS_TOKEN = "test";

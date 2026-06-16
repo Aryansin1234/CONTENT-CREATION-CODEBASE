@@ -1,0 +1,14 @@
+[
+  {
+    "name": "TechCrunch",
+    "rssUrl": "https://techcrunch.com/feed/"
+  },
+  {
+    "name": "The Verge",
+    "rssUrl": "https://www.theverge.com/rss/index.xml"
+  },
+  {
+    "name": "Hacker News",
+    "rssUrl": "https://hnrss.org/frontpage"
+  }
+]

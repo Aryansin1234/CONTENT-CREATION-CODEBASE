@@ -1,0 +1,78 @@
+services:
+
+  redis:
+    image: redis:7-alpine
+    container_name: tcp-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: tcp-pipeline
+    restart: unless-stopped
+    command: node dist/index.js
+    env_file: .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - pipeline-assets:/tmp/assets
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: tcp-worker
+    restart: unless-stopped
+    command: node dist/workers/post-worker.js
+    env_file: .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - pipeline-assets:/tmp/assets
+
+  engagement-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: tcp-engagement
+    restart: unless-stopped
+    command: node dist/workers/engagement-worker.js
+    env_file: .env
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    container_name: tcp-dashboard
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file: .env
+
+volumes:
+  redis-data:
+  pipeline-assets:

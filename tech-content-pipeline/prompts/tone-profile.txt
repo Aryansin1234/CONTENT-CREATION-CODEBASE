@@ -1,0 +1,46 @@
+# Your Personal Tone Profile
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#
+# HOW THIS FILE WORKS
+# The pipeline reads this file and injects your writing samples as context
+# into every caption, structure, and original-angle generation call.
+# The AI matches your vocabulary, sentence rhythm, energy level, and phrasing patterns.
+#
+# WHAT TO PASTE HERE
+# - 5–10 of your best-performing LinkedIn posts or Twitter threads
+# - "Best-performing" = posts that got strong engagement (comments > likes is the signal)
+# - Include a variety: a tutorial, an opinion, a news reaction, a personal story
+# - Aim for 300–2,000 characters per sample
+#
+# WHAT TO REMOVE BEFORE PASTING
+# - Hashtags (the pipeline adds those separately)
+# - Emojis (the pipeline handles placement)
+# - Links, image descriptions
+#
+# WHY IT MATTERS
+# Without this filled in, every post sounds like polished-but-generic GPT output.
+# With 5 real samples, posts start sounding like YOU wrote them.
+#
+# HOW TO UPDATE
+# Edit this file and save. No restart needed — the pipeline reads it fresh each run.
+# Clear prompt cache with: npm run cli -- flush-prompt-cache (if added)
+#
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[PASTE YOUR POSTS HERE]
+
+# ── Sample 1 ──────────────────────────────────────────────────────────────────
+# (Paste your best LinkedIn post or Twitter thread here)
+
+
+# ── Sample 2 ──────────────────────────────────────────────────────────────────
+# (A different content type — opinion, tutorial, or news reaction)
+
+
+# ── Sample 3 ──────────────────────────────────────────────────────────────────
+
+
+# ── Sample 4 ──────────────────────────────────────────────────────────────────
+
+
+# ── Sample 5 ──────────────────────────────────────────────────────────────────

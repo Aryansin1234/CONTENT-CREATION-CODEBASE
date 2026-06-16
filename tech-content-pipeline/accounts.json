@@ -1,0 +1,20 @@
+[
+  {
+    "name": "default",
+    "linkedin": {
+      "access_token": "",
+      "person_id": ""
+    },
+    "twitter": {
+      "api_key": "",
+      "api_secret": "",
+      "access_token": "",
+      "access_secret": ""
+    },
+    "instagram": {
+      "user_id": "",
+      "access_token": ""
+    },
+    "tone_profile": "prompts/tone-profile.txt"
+  }
+]
